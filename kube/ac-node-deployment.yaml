@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: ac-node
+  name: ac-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: ac-node
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        io.kompose.network/ac-node-devops: "true"
+        io.kompose.service: ac-node
+    spec:
+      containers:
+        - env:
+            - name: MONGO_URL
+              value: mongodb://mongodb:27017/ac_logindevops_db
+          image: masardon/ac-node-devops:latest
+          name: ac-node
+          ports:
+            - containerPort: 3000
+          resources: {}
+      restartPolicy: Always
+status: {}

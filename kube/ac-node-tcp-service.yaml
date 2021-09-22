@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: ac-node-tcp
+  name: ac-node-tcp
+spec:
+  ports:
+    - name: "backend"
+      port: 8001
+      targetPort: 3000
+  selector:
+    io.kompose.service: ac-node
+  type: LoadBalancer
+status:
+  loadBalancer: {}
