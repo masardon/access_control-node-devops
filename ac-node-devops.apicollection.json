@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "1c67eb30-42ab-461b-9c49-9dd36d4d2023",
+		"name": "ac-node-devops",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRhZjVlODFmODdhNmE3NTQ4YjBiNTkiLCJpYXQiOjE2MzIzMDI1NzcsImV4cCI6MTYzMjMwNjE3N30.yk-pIngXK4m8aO6DsdWmPshsyMD4oz5_c-hF2Y9XitE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "adminadd",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "adminpass",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin_role",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRhZjVlODFmODdhNmE3NTQ4YjBiNTkiLCJpYXQiOjE2MzIzMDI1NzcsImV4cCI6MTYzMjMwNjE3N30.yk-pIngXK4m8aO6DsdWmPshsyMD4oz5_c-hF2Y9XitE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "adminadd",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "adminpass",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin_role",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRhZjc1YzFmODdhNmE3NTQ4YjBiNjEiLCJpYXQiOjE2MzIzMDI5NTcsImV4cCI6MTYzMjMwNjU1N30.s6qzMl9XrYSgr6jIlyQfcpfyz-9c5oRlo8dGy55DOnk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "adminadd",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "adminpass",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin_role",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRhZjc1YzFmODdhNmE3NTQ4YjBiNjEiLCJpYXQiOjE2MzIzMDI5NTcsImV4cCI6MTYzMjMwNjU1N30.s6qzMl9XrYSgr6jIlyQfcpfyz-9c5oRlo8dGy55DOnk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "adminadd",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "adminpass",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin_role",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/user/614af5e81f87a6a7548b0b59",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"614af5e81f87a6a7548b0b59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRhZjc1YzFmODdhNmE3NTQ4YjBiNjEiLCJpYXQiOjE2MzIzMDM3MzUsImV4cCI6MTYzMjMwNzMzNX0.vW-bjsFLCHrqIyjkJdtkTv7X6G9B6-yCDM2WBhRZbDU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "useradd",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "userpass",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin_role",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/user/614af5e81f87a6a7548b0b59",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"614af5e81f87a6a7548b0b59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTRhZjc1YzFmODdhNmE3NTQ4YjBiNjEiLCJpYXQiOjE2MzIzMDM3MzUsImV4cCI6MTYzMjMwNzMzNX0.vW-bjsFLCHrqIyjkJdtkTv7X6G9B6-yCDM2WBhRZbDU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "useradd",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "userpass",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin_role",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/user/614af5e81f87a6a7548b0b59",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"614af5e81f87a6a7548b0b59"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
