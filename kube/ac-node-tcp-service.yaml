@@ -8,7 +8,7 @@ spec:
   ports:
     - name: "backend"
       port: 8001
-      targetPort: 3000
+      targetPort: 8001
   selector:
     service: ac-node
   type: LoadBalancer

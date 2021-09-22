@@ -11,5 +11,6 @@ spec:
       targetPort: 27017
   selector:
     service: mongodb
+  type: LoadBalancer
 status:
   loadBalancer: {}

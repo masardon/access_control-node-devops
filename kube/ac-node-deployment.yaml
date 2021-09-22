@@ -23,7 +23,7 @@ spec:
           image: masardon/ac-node-devops:latest
           name: ac-node
           ports:
-            - containerPort: 3000
+            - containerPort: 8001
           resources: {}
       restartPolicy: Always
 status: {}

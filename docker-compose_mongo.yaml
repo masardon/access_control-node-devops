@@ -5,21 +5,11 @@ volumes:
 
 networks:
   ac-node-devops:
-    external: false
+    driver: bridge
+    external: true
     name: 'ac-node-devops'
 
 services:
-  ac-node:
-    image: masardon/ac-node-devops:latest
-    restart: always
-    networks:
-      - ac-node-devops
-    environment:
-      MONGO_URL: 'mongodb://mongodb:27017/ac_logindevops_db'
-    ports:
-      - 8001:8001
-    links:
-      - mongodb
 
   mongodb:
     image: mongo:4.2
