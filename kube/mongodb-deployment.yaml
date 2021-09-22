@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: mongodb
+    service: mongodb
   name: mongodb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: mongodb
+      service: mongodb
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        io.kompose.network/ac-node-devops: "true"
-        io.kompose.service: mongodb
+        network/ac-node-devops: "true"
+        service: mongodb
     spec:
       containers:
         - env:

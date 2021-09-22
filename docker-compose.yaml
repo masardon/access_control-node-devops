@@ -31,6 +31,4 @@ services:
     environment:
       MONGO_URL: 'mongodb://mongodb:27017/ac_logindevops_db'
     ports:
-      - "8001:3000"
-    labels:
-      kompose.service.type: LoadBalancer	
+      - 8001:3000

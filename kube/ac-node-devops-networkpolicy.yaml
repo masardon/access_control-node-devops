@@ -7,7 +7,7 @@ spec:
     - from:
         - podSelector:
             matchLabels:
-              io.kompose.network/ac-node-devops: "true"
+              network/ac-node-devops: "true"
   podSelector:
     matchLabels:
-      io.kompose.network/ac-node-devops: "true"
+      network/ac-node-devops: "true"
