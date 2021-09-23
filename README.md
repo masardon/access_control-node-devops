@@ -30,3 +30,4 @@ Simple CRUD with Access Control using NodeJS, MongoDB and JWT running in Docker 
 - Username : adminadd
 - Password : adminpass
 ~~~~
+If you run on your own, better to run SignUp API first
